@@ -1,0 +1,28 @@
+.bg__img {
+   background: url(../../assets/slider_1.jpg);
+   height: 780px;
+   width: 100vw;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin-top: -15px;
+}
+
+.content {
+   position: relative;
+   top: 300px;
+   left: 26px;
+}
+
+.content > p {
+   font-weight: 600;
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.content > h1 {
+   font-size: 40px;
+   font-weight: 500;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   line-height: 80px;
+   padding-bottom: 6px;
+}
