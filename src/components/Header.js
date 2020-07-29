@@ -1,10 +1,10 @@
 import React from "react";
-import { makeStyles, fade } from "@material-ui/core/styles";
+import { makeStyles, fade, withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 import Container from "@material-ui/core/Container";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -12,6 +12,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import Badge from "@material-ui/core/Badge";
 
 const useStyles = makeStyles((theme) => ({
    root: {
@@ -64,6 +65,15 @@ const useStyles = makeStyles((theme) => ({
    },
 }));
 
+const StyledBadge = withStyles((theme) => ({
+   badge: {
+      right: -3,
+      top: 13,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+   },
+}))(Badge);
+
 const menus = [
    { name: "Home", link: "/" },
    { name: "About", link: "/about" },
@@ -114,8 +124,10 @@ const Header = () => {
                      <AccountCircleIcon />
                   </IconButton>
 
-                  <IconButton className={classes.menuIcons}>
-                     <ShoppingCartIcon />
+                  <IconButton aria-label="cart">
+                     <StyledBadge badgeContent={4} color="secondary">
+                        <ShoppingCartIcon />
+                     </StyledBadge>
                   </IconButton>
                </Toolbar>
             </Container>

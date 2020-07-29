@@ -1,7 +1,7 @@
 .bg__img {
-   background: url(../../assets/slider_1.jpg);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(../../assets/slider_1.jpg);
    height: 780px;
-   width: 100vw;
+   width: 100%;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -26,3 +26,4 @@
    line-height: 80px;
    padding-bottom: 6px;
 }
+

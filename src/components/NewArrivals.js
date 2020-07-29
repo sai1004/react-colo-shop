@@ -1,11 +1,26 @@
-import React from 'react'
+import React from "react";
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 const NewArrivals = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+   const [value, setValue] = React.useState(2);
 
-export default NewArrivals
+   const handleChange = (event, newValue) => {
+      setValue(newValue);
+   };
+
+   return (
+      <div>
+         <Paper square>
+            <Tabs value={value} indicatorColor="primary" textColor="primary" onChange={handleChange} aria-label="disabled tabs example">
+               <Tab label="Active" />
+               <Tab label="Disabled" disabled />
+               <Tab label="Active" />
+            </Tabs>
+         </Paper>
+      </div>
+   );
+};
+
+export default NewArrivals;

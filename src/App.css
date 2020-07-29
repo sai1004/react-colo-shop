@@ -15,3 +15,29 @@ h6 {
    padding: 0;
    margin: 0;
 }
+
+.flex__items {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.category_Component {
+   padding-top: 50px;
+}
+
+.category__layout {
+   height: 260px;
+   width: 350px;
+   margin: 4px;
+}
+
+.category__Bgimg {
+   height: 260px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
