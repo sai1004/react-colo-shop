@@ -7,6 +7,8 @@ import "./Home.css";
 import NewArrivals from "../../components/NewArrivals";
 import CategoryImgs from "../../components/ CategoryImgs";
 import DealOfWeek from "../../components/DealOfWeek";
+import BestSellers from "../../components/BestSellers";
+import LatestBlogs from "../../components/LatestBlogs";
 
 const HomePage = () => {
    return (
@@ -34,6 +36,12 @@ const HomePage = () => {
          </div>
          <div className="component__Gap">
             <DealOfWeek />
+         </div>
+         <div className="component__Gap">
+            <BestSellers />
+         </div>
+         <div className="component__Gap">
+            <LatestBlogs />
          </div>
       </React.Fragment>
    );

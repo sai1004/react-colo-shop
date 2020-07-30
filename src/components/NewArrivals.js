@@ -1,4 +1,7 @@
 import React from "react";
+
+import "../pages/home/Home.css";
+
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";

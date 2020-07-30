@@ -53,3 +53,8 @@ h6 {
    width: 200px;
    border: 2px solid salmon;
 }
+
+.footer__bgGray {
+   padding: 30px;
+   background-color: rgb(240, 238, 238);
+}
