@@ -9,12 +9,14 @@
 }
 
 .content {
-   position: relative;
+   /* position: absolute;
    top: 300px;
-   left: 26px;
+   left: 26px; */
+   /* margin-top: 100px; */
 }
 
 .content > p {
+   padding-top: 280px;
    font-weight: 600;
    font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -27,3 +29,12 @@
    padding-bottom: 6px;
 }
 
+.deal_of_Week_bgImg {
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/deal_ofthe_week.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 500px;
+   object-fit: contain;
+   position: relative;
+   text-align: center;
+}

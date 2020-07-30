@@ -14,21 +14,21 @@ const CategoryImgs = () => {
             <div className="flex__items">
                <div className="category__layout">
                   <img src={WomenImgOne} alt="imgOne" className="category__Bgimg" />
-                  {/* <div className="content">
-                     <Button> Women's </Button>
-                  </div> */}
+                  <span className="content">
+                     <Button variant="contained"> Women's </Button>
+                  </span>
                </div>
                <div className="category__layout">
                   <img src={AccessoriesImg} alt="imgOne" className="category__Bgimg" />
-                  {/* <div className="content">
-                     <Button> Accessories </Button>
-                  </div> */}
+                  <span className="content">
+                     <Button variant="contained"> Accessories </Button>
+                  </span>
                </div>
                <div className="category__layout">
                   <img src={MenImg} alt="imgOne" className="category__Bgimg" />
-                  {/* <div className="content">
-                     <Button> Men's </Button>
-                  </div> */}
+                  <span className="content">
+                     <Button variant="contained"> Men's </Button>
+                  </span>
                </div>
             </div>
          </Container>

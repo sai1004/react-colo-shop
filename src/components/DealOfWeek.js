@@ -1,10 +1,13 @@
 import React from 'react'
+import "../pages/home/Home.css";
 
 const DealOfWeek = () => {
     return (
-        <div>
-            
-        </div>
+        <React.Fragment>
+            <div className="deal_of_Week_bgImg">
+
+            </div>
+        </React.Fragment>
     )
 }
 
