@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { makeStyles, fade, withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -11,8 +13,8 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
 import Badge from "@material-ui/core/Badge";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
    root: {
@@ -103,8 +105,9 @@ const Header = () => {
                   <Typography variant="h6">COLOSHOP</Typography>
 
                   <Typography variant="h6" className={classes.fillSpacer}></Typography>
-
-                  <div>{getMenus}</div>
+                  <Hidden only={["xs", "sm"]}>
+                     <div>{getMenus}</div>
+                  </Hidden>
 
                   <div className={classes.search}>
                      <div className={classes.searchIcon}>

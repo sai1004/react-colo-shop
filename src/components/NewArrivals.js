@@ -3,17 +3,10 @@ import React from "react";
 import "../pages/home/Home.css";
 
 import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const NewArrivals = () => {
-   const [value, setValue] = React.useState(4);
-
-   const handleChange = (event, newValue) => {
-      setValue(newValue);
-   };
-
    return (
       <React.Fragment>
          <div className="content" Align="center">
@@ -21,14 +14,14 @@ const NewArrivals = () => {
             <div className="underLine"> </div>
          </div>
          <Container maxWidth="sm">
-            <Paper square>
-               <Tabs value={value} indicatorColor="primary" textColor="primary" onChange={handleChange}>
-                  <Tab label="ALL" />
-                  <Tab label="WOMEN'S" />
-                  <Tab label="ACCESSORIES" />
-                  <Tab label="MEN'S" />
-               </Tabs>
-            </Paper>
+            <div Align="center" className="arrivals__GroupBtns">
+               <ButtonGroup size="large" color="secondary" aria-label="large outlined primary button group">
+                  <Button>ALL</Button>
+                  <Button>WOMEN'S</Button>
+                  <Button>ACCESSORIES</Button>
+                  <Button>MEN'S</Button>
+               </ButtonGroup>
+            </div>
          </Container>
       </React.Fragment>
    );

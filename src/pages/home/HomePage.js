@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 
 import "./Home.css";
 import NewArrivals from "../../components/NewArrivals";
-import CategoryImgs from "../../components/ CategoryImgs";
+import CategoryImgs from "../../components/CategoryImgs";
 import DealOfWeek from "../../components/DealOfWeek";
 import BestSellers from "../../components/BestSellers";
 import LatestBlogs from "../../components/LatestBlogs";
