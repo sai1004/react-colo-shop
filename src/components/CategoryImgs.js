@@ -9,28 +9,33 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 
 const CategoryImgs = () => {
+   const data = [
+      {
+         img: WomenImgOne,
+         btnName: "Women's",
+      },
+      {
+         img: AccessoriesImg,
+         btnName: "Accessories",
+      },
+      {
+         img: MenImg,
+         btnName: " Men's",
+      },
+   ];
+
    return (
       <React.Fragment>
          <Container maxWidth="lg">
             <div className="flex__items">
-               <div className="category__layout">
-                  <img src={WomenImgOne} alt="imgOne" className="category__Bgimg" />
-                  <span className="content">
-                     <Button variant="contained"> Women's </Button>
-                  </span>
-               </div>
-               <div className="category__layout">
-                  <img src={AccessoriesImg} alt="imgOne" className="category__Bgimg" />
-                  <span className="content">
-                     <Button variant="contained"> Accessories </Button>
-                  </span>
-               </div>
-               <div className="category__layout">
-                  <img src={MenImg} alt="imgOne" className="category__Bgimg" />
-                  <span className="content">
-                     <Button variant="contained"> Men's </Button>
-                  </span>
-               </div>
+               {data.map((item, i) => (
+                  <div key={i} className="category__layout">
+                     <img src={item.img} alt={item.btnName} className="category__Bgimg" />
+                     <span className="content">
+                        <Button variant="contained"> {item.btnName} </Button>
+                     </span>
+                  </div>
+               ))}
             </div>
          </Container>
       </React.Fragment>

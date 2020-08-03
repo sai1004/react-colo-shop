@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -6,6 +6,18 @@ import { Button } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 
 const Footer = () => {
+   const [subscribe, setSubscribe] = useState("");
+
+   const handleChange = (e) => {
+      setSubscribe(e.target.value);
+      console.log("SubsCribe: ", e.target.value);
+   };
+
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log("SubsCribed: ", subscribe);
+   };
+
    return (
       <React.Fragment>
          <div className="footer__bgGray">
@@ -16,17 +28,20 @@ const Footer = () => {
                      <p>Subscribe to our newsletter and get 20% off your first purchase </p>
                   </Grid>
                   <Grid item xs={12} sm={6}>
-                     <form noValidate autoComplete="off">
+                     <form onSubmit={handleSubmit} noValidate autoComplete="off">
                         <TextField
                            type="text"
                            id="outlined-basic"
                            label="Your Email"
                            variant="outlined"
-                           placeholder="your email"
                            size="small"
                            color="secondary"
+                           value={subscribe}
+                           onChange={handleChange}
+                           placeholder="your email"
+                           required
                         />
-                        <Button variant="contained" color="secondary">
+                        <Button type="submit" variant="contained" color="secondary">
                            Subscribe
                         </Button>
                      </form>

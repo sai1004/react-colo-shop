@@ -78,23 +78,13 @@ const StyledBadge = withStyles((theme) => ({
    },
 }))(Badge);
 
-const menus = [
-   { name: "Home", link: "/" },
-   { name: "About", link: "/about" },
-   { name: "contact", link: "/contact" },
-];
-
-const getMenus = menus.map((menu, i) => {
-   return (
-      <Button key={i} color="inherit">
-         <Link key={i} to={menu.link} className="text__none">
-            {menu.name}
-         </Link>
-      </Button>
-   );
-});
-
 const Header = () => {
+   const menus = [
+      { name: "Home", link: "/" },
+      { name: "About", link: "/about" },
+      { name: "contact", link: "/contact" },
+   ];
+
    const [anchorEl, setAnchorEl] = React.useState(null);
 
    const handleClick = (event) => {
@@ -114,8 +104,19 @@ const Header = () => {
                   <Typography variant="h6">COLOSHOP</Typography>
 
                   <Typography variant="h6" className={classes.fillSpacer}></Typography>
+
                   <Hidden only={["xs", "sm"]}>
-                     <div>{getMenus}</div>
+                     <div>
+                        {menus.map((menu, i) => {
+                           return (
+                              <Button key={i} color="inherit">
+                                 <Link key={i} to={menu.link} className="text__none">
+                                    {menu.name}
+                                 </Link>
+                              </Button>
+                           );
+                        })}
+                     </div>
                   </Hidden>
 
                   <div className={classes.search}>
