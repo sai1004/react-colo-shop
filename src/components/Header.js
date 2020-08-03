@@ -15,6 +15,8 @@ import InputBase from "@material-ui/core/InputBase";
 import Button from "@material-ui/core/Button";
 import Badge from "@material-ui/core/Badge";
 import Hidden from "@material-ui/core/Hidden";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const useStyles = makeStyles((theme) => ({
    root: {
@@ -93,15 +95,22 @@ const getMenus = menus.map((menu, i) => {
 });
 
 const Header = () => {
+   const [anchorEl, setAnchorEl] = React.useState(null);
+
+   const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+   };
+
+   const handleClose = () => {
+      setAnchorEl(null);
+   };
+
    const classes = useStyles();
    return (
       <React.Fragment>
-         <AppBar position="static" style={{ backgroundColor: "white", color: "black" }}>
+         <AppBar position="fixed" style={{ backgroundColor: "white", color: "black" }}>
             <Container maxWidth="lg">
                <Toolbar>
-                  {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                     <MenuIcon />
-                  </IconButton> */}
                   <Typography variant="h6">COLOSHOP</Typography>
 
                   <Typography variant="h6" className={classes.fillSpacer}></Typography>
@@ -122,10 +131,15 @@ const Header = () => {
                         inputProps={{ "aria-label": "search" }}
                      />
                   </div>
-
-                  <IconButton className={classes.menuIcons}>
+                  <IconButton className={classes.menuIcons} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                      <AccountCircleIcon />
                   </IconButton>
+
+                  <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+                     <MenuItem onClick={handleClose}>Profile</MenuItem>
+                     <MenuItem onClick={handleClose}>My account</MenuItem>
+                     <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  </Menu>
 
                   <IconButton aria-label="cart">
                      <StyledBadge badgeContent={4} color="secondary">

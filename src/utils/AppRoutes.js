@@ -11,12 +11,14 @@ let routes = [
    { path: "/contact", component: ContactPage },
 ];
 
-const getRoutes = routes.map((route, i) => {
-   return <Route key={i} exact path={route.path} component={route.component} />;
-});
-
 const AppRoutes = () => {
-   return <div>{getRoutes}</div>;
+   return (
+      <div>
+         {routes.map((route, i) => {
+            return <Route key={i} exact path={route.path} component={route.component} />;
+         })}
+      </div>
+   );
 };
 
 export default AppRoutes;
