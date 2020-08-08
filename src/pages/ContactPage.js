@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
-import { Button } from "@material-ui/core";
 import { TextareaAutosize } from "@material-ui/core";
+import { Container, Grid, Button, TextField } from "../shared/MaterialUi";
 
 const ContactPage = () => {
    const [contact, setContact] = useState({
@@ -14,10 +11,23 @@ const ContactPage = () => {
       message: "",
    });
 
-   const handleChange = (e) => {
-      e.preventDefault();
+   const handleChange = (event) => {
+      const { name, value } = event.target;
+      setContact({
+         [name]: value,
+      });
    };
-   const handleSubmit = (e) => {};
+
+   const handleSubmit = (event) => {
+      event.preventDefault();
+      alert("We Have Recived Your Details We Will Contact You ASAP!! ");
+      setContact({
+         name: "",
+         email: "",
+         website: "",
+         message: "",
+      });
+   };
 
    return (
       <div>
@@ -31,7 +41,8 @@ const ContactPage = () => {
                   <Grid item xs={12} sm={6}>
                      <h2> Contact Us </h2>
                      <p>
-                        There are many ways to contact us. You may drop us a line, <br /> give us a call or send an email, choose what suits you the most.{" "}
+                        There are many ways to contact us. You may drop us a line,
+                        <br /> give us a call or send an email, choose what suits you the most.
                      </p>
 
                      <p>(800) 686-6688 info.deercreative@gmail.com</p>

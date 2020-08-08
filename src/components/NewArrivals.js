@@ -2,9 +2,7 @@ import React from "react";
 
 import "../pages/home/Home.css";
 
-import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+import { Container, ButtonGroup, Button } from "../shared/MaterialUi";
 
 const NewArrivals = () => {
    return (

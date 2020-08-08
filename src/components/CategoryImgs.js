@@ -5,8 +5,7 @@ import AccessoriesImg from "../assets/banner_2.jpg";
 import MenImg from "../assets/banner_3.jpg";
 import "../pages/home/Home.css";
 
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
+import { Container, Button } from "../shared/MaterialUi";
 
 const CategoryImgs = () => {
    const data = [

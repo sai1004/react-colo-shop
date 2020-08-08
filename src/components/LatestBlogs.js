@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../pages/home/Home.css";
 
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import { Container, Grid } from "../shared/MaterialUi";
 
 import BlogOne from "../assets/blog_1.jpg";
 import BlogTwo from "../assets/blog_2.jpg";
