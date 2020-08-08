@@ -4,11 +4,13 @@ import { Route } from "react-router-dom";
 import HomePage from "../pages/home/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
+import SigninPage from "../pages/signin/signInPage";
 
 let routes = [
    { path: "/", component: HomePage },
    { path: "/about", component: AboutPage },
    { path: "/contact", component: ContactPage },
+   { path: "/signin", component: SigninPage },
 ];
 
 const AppRoutes = () => {

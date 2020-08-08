@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import AppRoutes from "./utils/AppRoutes";
 import Footer from "./components/Footer";
 import TopHeader from "./components/TopHeader";
+import Auth from "./entities/Auth";
 
-function App() {
+import authContext from "./shared/authContext";
+
+const App = () => {
    return (
       <div>
          <Router>
@@ -20,6 +23,6 @@ function App() {
          </Router>
       </div>
    );
-}
+};
 
 export default App;

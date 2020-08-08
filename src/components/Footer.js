@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import { Button } from "@material-ui/core";
-import TextField from "@material-ui/core/TextField";
+import { Container, Grid, TextField, Button } from "../shared/MaterialUi";
 
 const Footer = () => {
    const [subscribe, setSubscribe] = useState("");

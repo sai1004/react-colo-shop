@@ -1,22 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { makeStyles, fade, withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-// import MenuIcon from "@material-ui/icons/Menu";
-import Container from "@material-ui/core/Container";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
-import Button from "@material-ui/core/Button";
-import Badge from "@material-ui/core/Badge";
-import Hidden from "@material-ui/core/Hidden";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import {
+   makeStyles,
+   fade,
+   withStyles,
+   MenuItem,
+   Menu,
+   Hidden,
+   Badge,
+   Button,
+   AppBar,
+   Toolbar,
+   Typography,
+   IconButton,
+   Container,
+   AccountCircleIcon,
+   ShoppingCartIcon,
+   SearchIcon,
+   InputBase,
+} from "../shared/MaterialUi";
 
 const useStyles = makeStyles((theme) => ({
    root: {
