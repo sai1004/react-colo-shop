@@ -56,7 +56,7 @@ const LatestBlogs = () => {
                      <div className="blogs_layout">
                         <img className="blog__imgs" src={item.img} alt={item.img} />
                         <div className="inside__Content">
-                           <h4> {item.title}</h4>
+                           <h4> {item.title} </h4>
                            <p> {item.postedBy} </p>
                            <p style={{ color: "#f50057" }}> {item.readMore} </p>
                         </div>
