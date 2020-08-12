@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../pages/home/Home.css";
 
 import { Container, Grid } from "../shared/MaterialUi";
@@ -9,26 +9,39 @@ import BlogThree from "../assets/blog_3.jpg";
 import "../pages/home/Home.css";
 
 const LatestBlogs = () => {
-   const data = [
-      {
-         img: BlogOne,
-         title: "Here are the trends I see coming this fall",
-         postedBy: " BY ADMIN | DEC 01, 2017 ",
-         readMore: "Read more",
-      },
-      {
-         img: BlogTwo,
-         title: "Here are the trends I see coming this fall",
-         postedBy: " BY ADMIN | DEC 01, 2017 ",
-         readMore: "Read more",
-      },
-      {
-         img: BlogThree,
-         title: "Here are the trends I see coming this fall",
-         postedBy: " BY ADMIN | DEC 01, 2017 ",
-         readMore: "Read more",
-      },
-   ];
+   const [data, setData] = useState([]);
+
+   console.log(data);
+
+   useEffect(() => {
+      setData([
+         {
+            img: BlogOne,
+            title: "Here are the trends I see coming this fall",
+            postedBy: " BY ADMIN | DEC 01, 2017 ",
+            readMore: "Read more",
+         },
+         {
+            img: BlogTwo,
+            title: "Here are the trends I see coming this fall",
+            postedBy: " BY ADMIN | DEC 01, 2017 ",
+            readMore: "Read more",
+         },
+         {
+            img: BlogThree,
+            title: "Here are the trends I see coming this fall",
+            postedBy: " BY ADMIN | DEC 01, 2017 ",
+            readMore: "Read more",
+         },
+      ]);
+   }, []); // useEffect Calls only Once When the Component Renders and also when callback [data] is changed
+
+   useEffect(() => {
+      fetch("https://fakestoreapi.com/products")
+         .then((res) => res.json())
+         .then((json) => console.log(json))
+         .catch((error) => console.log(error));
+   }, []);
 
    return (
       <React.Fragment>
