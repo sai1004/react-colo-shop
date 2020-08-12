@@ -12,12 +12,21 @@ const LatestBlogs = () => {
    const data = [
       {
          img: BlogOne,
+         title: "Here are the trends I see coming this fall",
+         postedBy: " BY ADMIN | DEC 01, 2017 ",
+         readMore: "Read more",
       },
       {
          img: BlogTwo,
+         title: "Here are the trends I see coming this fall",
+         postedBy: " BY ADMIN | DEC 01, 2017 ",
+         readMore: "Read more",
       },
       {
          img: BlogThree,
+         title: "Here are the trends I see coming this fall",
+         postedBy: " BY ADMIN | DEC 01, 2017 ",
+         readMore: "Read more",
       },
    ];
 
@@ -32,8 +41,12 @@ const LatestBlogs = () => {
                {data.map((item, i) => (
                   <Grid key={i} item xs={12} sm={4}>
                      <div className="blogs_layout">
-                        <img src={item.img} alt={item.img} />
-                        <div className="inside__Content"></div>
+                        <img className="blog__imgs" src={item.img} alt={item.img} />
+                        <div className="inside__Content">
+                           <h4> {item.title}</h4>
+                           <p> {item.postedBy} </p>
+                           <p style={{ color: "#f50057" }}> {item.readMore} </p>
+                        </div>
                      </div>
                   </Grid>
                ))}
