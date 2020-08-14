@@ -6,7 +6,6 @@ import AppRoutes from "./utils/AppRoutes";
 import Footer from "./components/Footer";
 import TopHeader from "./components/TopHeader";
 import Auth from "./entities/Auth";
-
 import authContext from "./shared/authContext";
 
 const App = () => {
