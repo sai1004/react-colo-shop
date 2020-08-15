@@ -6,6 +6,8 @@ import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import SigninPage from "../pages/signin/signInPage";
 
+// routes goes here ---------->
+
 let routes = [
    { path: "/", component: HomePage },
    { path: "/about", component: AboutPage },

@@ -1,5 +1,5 @@
 const Auth = {
-   userNamae: "",
+   userName: "",
    email: "",
    password: "",
 };
