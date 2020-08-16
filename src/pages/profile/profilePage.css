@@ -1,0 +1,42 @@
+.sideBar {
+   background-color: rgb(240, 238, 238);
+   border: 2px solid grey;
+}
+
+.align__items {
+   text-align: center;
+}
+
+.menu__items__left {
+   text-align: left;
+   padding: 8px;
+}
+
+.menu__item {
+   border-left: 5px solid red;
+}
+
+.profile__pic__frame {
+   padding-top: 50px;
+   padding-bottom: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.profile__bg {
+   height: 180px;
+   width: 180px;
+   border-radius: 50%;
+   text-align: center;
+}
+
+.profile__pic {
+   height: 180px;
+   width: 180px;
+   border-radius: 50%;
+}
+
+.list__item {
+   border-left: 5px solid #f50057;
+}

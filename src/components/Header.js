@@ -139,7 +139,11 @@ const Header = () => {
                   </IconButton>
 
                   <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-                     <MenuItem onClick={handleClose}>Profile</MenuItem>
+                     <MenuItem onClick={handleClose}>
+                        <Link to="/profile" style={{ textDecoration: "none" }}>
+                           Profile
+                        </Link>
+                     </MenuItem>
                      <MenuItem onClick={handleClose}>My account</MenuItem>
                      <MenuItem onClick={handleClose}>
                         <Link to="/signin" style={{ textDecoration: "none" }}>

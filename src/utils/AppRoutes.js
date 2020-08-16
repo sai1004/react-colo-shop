@@ -5,6 +5,7 @@ import HomePage from "../pages/home/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import SigninPage from "../pages/signin/signInPage";
+import ProfilePage from "../pages/profile/ProfilePage";
 
 // routes goes here ---------->
 
@@ -13,6 +14,7 @@ let routes = [
    { path: "/about", component: AboutPage },
    { path: "/contact", component: ContactPage },
    { path: "/signin", component: SigninPage },
+   { path: "/profile", component: ProfilePage },
 ];
 
 const AppRoutes = () => {
