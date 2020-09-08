@@ -50,9 +50,9 @@ const LatestBlogs = () => {
             <div className="underLine"> </div>
          </div>
          <Container maxWidth="lg">
-            <Grid container spacing={3}>
+            <div className="flex__items">
                {data.map((item, i) => (
-                  <Grid key={i} item xs={12} sm={4}>
+                  <div key={i} className="category__layout">
                      <div className="blogs_layout">
                         <img className="blog__imgs" src={item.img} alt={item.img} />
                         <div className="inside__Content">
@@ -61,9 +61,9 @@ const LatestBlogs = () => {
                            <p style={{ color: "#f50057" }}> {item.readMore} </p>
                         </div>
                      </div>
-                  </Grid>
+                  </div>
                ))}
-            </Grid>
+            </div>
          </Container>
       </React.Fragment>
    );

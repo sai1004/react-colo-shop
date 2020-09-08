@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProfilePage.css";
 
-import { Container, Grid } from "../../shared/MaterialUi";
+import { Container, Grid, Box, TextField } from "../../shared/MaterialUi";
 import SideBar from "./SideBar";
 
 const ProfilePage = () => {
@@ -15,7 +15,17 @@ const ProfilePage = () => {
                   </div>
                </Grid>
                <Grid item xs={12} sm={9}>
-                  <h1> Hello Profile</h1>
+                  <Box textAlign="center">
+                     <h1> Profile Details </h1>
+                  </Box>
+
+                  <Box>
+                     <TextField id="outlined-password-input" label="name" type="text" variant="outlined" />
+
+                     <TextField id="outlined-email-input" label="email" type="email" variant="outlined" />
+
+                     <TextField id="outlined-mobile-input" label="mobile" type="text" variant="outlined" />
+                  </Box>
                </Grid>
             </Grid>
          </Container>

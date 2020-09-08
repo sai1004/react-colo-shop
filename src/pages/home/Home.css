@@ -50,16 +50,17 @@
 
 .blogs_layout {
    position: relative;
+   margin: 10px;
 }
 
 .blog__imgs {
-   width: auto;
+   max-width: 333px;
    object-fit: contain;
 }
 
 .inside__Content {
    position: absolute;
-   transform: translate(-50%, -50%);
+   transform: translate(-46%, -50%);
    top: 50%;
    right: -33%;
    left: 47%;
